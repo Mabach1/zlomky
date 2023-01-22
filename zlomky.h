@@ -14,6 +14,10 @@
 
 #include <iostream>
 
+/**
+ * @brief trida pro praci se zlomky 
+ * 
+ */
 class Zlomek {
 private:
     int citatel;
@@ -27,11 +31,19 @@ public:
 	friend std::ostream &operator << (std::ostream &output, Zlomek content);
 	friend std::istream &operator >> (std::istream &input, Zlomek& content);
 
-	// funkce pro praci se zlomky
+	// zakladni aritmeticke funkce pro praci se zlomky
 	friend Zlomek operator - (const Zlomek& cislo1, const Zlomek& cislo2);
 	friend Zlomek operator + (const Zlomek& cislo1, const Zlomek& cislo2);
 	friend Zlomek operator * (const Zlomek& cislo1, const Zlomek& cislo2);
 	friend Zlomek operator / (const Zlomek& cislo1, const Zlomek& cislo2);
+	
+	// porovnavani dvou zlomku
+    	friend bool operator > (const Zlomek& zlomek1, const Zlomek& zlomek2); 
+	friend bool operator < (const Zlomek& zlomek1, const Zlomek& zlomek2); 
+	friend bool operator == (const Zlomek& zlomek1, const Zlomek& zlomek2); 
+
+	// v budoucnu mozno dodelat dalsi funcke jako '<=' nebo '>=', ktere se daji pouzit mimo jednoduche porovnavani dvou hodnot 
+	friend bool operator != (const Zlomek& zlomek1, const Zlomek& zlomek2); 
 };
 
 #endif
