@@ -16,8 +16,8 @@
  * 
  */
 struct user_input {
-    Zlomek zlomek1;
-    Zlomek zlomek2;
+	Zlomek zlomek1;
+	Zlomek zlomek2;
 };
 /**
  * @brief uzivatelska nabidka
@@ -25,19 +25,19 @@ struct user_input {
  * @return volbu uzivatele
  */
 int menu(void) {
-    std::cout << "---------------------------\n";
-    std::cout << "0 - UKONCI\n";
-    std::cout << "1 - secti dva zlomky\n";
-    std::cout << "2 - odecti dva zlomky\n";
-    std::cout << "3 - vynasob dva zlomky\n";
-    std::cout << "4 - vydel dva zlomky\n";
-
-    int volba = 0;
-
-    std::cout << "vyber: ";
-    std::cin >> volba;
-
-    return volba;
+	std::cout << "---------------------------\n";
+	std::cout << "0 - UKONCI\n";
+	std::cout << "1 - secti dva zlomky\n";
+	std::cout << "2 - odecti dva zlomky\n";
+	std::cout << "3 - vynasob dva zlomky\n";
+	std::cout << "4 - podel dva zlomky\n";
+	
+	int volba = 0;
+	
+	std::cout << "vyber: ";
+	std::cin >> volba;
+	
+	return volba;
 }
 /**
  * @brief ziska a vrati dva zlomky 
@@ -45,54 +45,54 @@ int menu(void) {
  * @return struct user_input = dva zlomky 
  */
 struct user_input get_user_input(void) {
-    struct user_input us_input;
-    
-    std::cout << "zadejte 1. zlomek:\n";
-    std::cin >> us_input.zlomek1;
-    std::cout << "zadejte 2. zlomek:\n";
-    std::cin >> us_input.zlomek2;
-
-    return us_input;
+	struct user_input us_input;
+	
+	std::cout << "zadejte 1. zlomek:\n";
+	std::cin >> us_input.zlomek1;
+	std::cout << "zadejte 2. zlomek:\n";
+	std::cin >> us_input.zlomek2;
+	
+	return us_input;
 }
 
 int main(void) {
-    bool running = true;
-
-    Zlomek              vysledek;   // vysledek dane operace s dvema zlomky
-    struct user_input   input;      // uzivatelem zadane dva zlomky
-
-    while (running) {
-        switch (menu()) {
-            case 0: 
-                return 0;
-
-                break;
-            case 1:
-                input = get_user_input();     // nacteni dvou zlomku
-
-                vysledek = input.zlomek1 + input.zlomek2;
-
-                break;
-            case 2:
-                input = get_user_input();
-
-                vysledek = input.zlomek1 - input.zlomek2;
-
-                break;
-            case 3:
-                input = get_user_input();
-
-                vysledek = input.zlomek1 * input.zlomek2;
-
-                break;
-            case 4:
-                input = get_user_input();
-
-                vysledek = input.zlomek1 / input.zlomek2;
-
-                break;
-        }
-
-        std::cout << std::endl << vysledek;     // vypsani vysledku
-    }
+	bool running = true;
+	
+	while (running) {
+		Zlomek              vysledek;   // vysledek dane operace s dvema zlomky
+		struct user_input   input;      // uzivatelem zadane dva zlomky
+		
+		switch (menu()) {
+			case 0: 
+			return 0;
+			
+			break;
+		case 1:
+			input = get_user_input();     // nacteni dvou zlomku
+			
+			vysledek = input.zlomek1 + input.zlomek2;
+			
+			break;
+		case 2:
+			input = get_user_input();
+			
+			vysledek = input.zlomek1 - input.zlomek2;
+			
+			break;
+		case 3:
+			input = get_user_input();
+			
+			vysledek = input.zlomek1 * input.zlomek2;
+			
+			break;
+		case 4:
+			input = get_user_input();
+			
+			vysledek = input.zlomek1 / input.zlomek2;
+			
+			break;
+		}
+		
+		std::cout << std::endl << vysledek;     // vypsani vysledku
+	}
 }
