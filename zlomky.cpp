@@ -195,7 +195,7 @@ Zlomek operator / (const Zlomek& cislo1, const Zlomek& cislo2) {
 /**
  * @brief friend funkce pro porovnani dvou zlomku
  * 
- * zlomek1 > zlomke2 => true
+ * zlomek1 > zlomek2 => true
  * 
  * @param zlomek1 
  * @param zlomek2 
@@ -208,7 +208,7 @@ bool operator > (const Zlomek& zlomek1, const Zlomek& zlomek2) {
 /**
  * @brief friend funkce pro porovnani dvou zlomku
  * 
- * zlomek1 < zlomke2 => true
+ * zlomek1 < zlomek2 => true
  * 
  * @param zlomek1 
  * @param zlomek2 
@@ -221,7 +221,7 @@ bool operator < (const Zlomek& zlomek1, const Zlomek& zlomek2) {
 /**
  * @brief friend funkce pro porovnani dvou zlomku
  * 
- * zlomek1 == zlomke2 => true
+ * zlomek1 == zlomek2 => true
  * 
  * @param zlomek1 
  * @param zlomek2 
@@ -234,7 +234,7 @@ bool operator == (const Zlomek& zlomek1, const Zlomek& zlomek2) {
 /**
  * @brief friend funkce pro porovnani dvou zlomku
  * 
- * zlomek1 != zlomke2 => true
+ * zlomek1 != zlomek2 => true
  * 
  * @param zlomek1 
  * @param zlomek2 
