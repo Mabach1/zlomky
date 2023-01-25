@@ -1,2 +1,2 @@
 # zlomky
-knihovna pro praci se zlomky
+zakladni funkce se zlomky🍜
