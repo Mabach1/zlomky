@@ -1,2 +1,2 @@
 # zlomky
-zakladni funkce se zlomky🍜
+zakladni prace se zlomky 🍜
